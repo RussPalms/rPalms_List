@@ -1,0 +1,1 @@
+web: gunicorn rpalms_list.wsgi

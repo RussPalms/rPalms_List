@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 from . import models
 
 BASE_CRAIGSLIST_URL = 'https://inlandempire.craigslist.org/search/?query={}'
+# every image on craigslist is set to these dimentions so from that we can create
+# a base url 
 BASE_IMAGE_URL = 'https://images.craigslist.org/{}_300x300.jpg'
 
 # Create your views here.
@@ -48,6 +50,10 @@ def new_search(request):
         else:
             post_price = 'N/A'
         
+        # to parse through the images on craigslist we need to identify the patterns in the 
+        # layout of the 'img' attributes 
+        # from there we can filter out the necessary data to loop through all the images
+        # for each listing
         if post.find(class_='result-image').get('data-ids'):
             post_image_id = post.find(class_='result-image').get('data-ids').split(',')[0].split(':')[1]
             post_image_url = BASE_IMAGE_URL.format(post_image_id)

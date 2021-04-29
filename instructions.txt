@@ -226,4 +226,22 @@ in the CLI
     and fix the format of the listings.
 
 63. After all is fixed we can start hosting our app on the internet. We will be using 
-    Heroku for this.
+    Heroku for this. To start, we need to create our Procfile:
+        touch Procfile
+
+64. Install the django_heroku library:
+        pip install django-heroku
+
+65. Then go to the settings file to import the django_heroku library.
+
+66. Install the gunicorn library:
+        pip install gunicorn
+
+67. We'll then go ahead and retrieve our dependencies again:
+        pip freeze > requirements.txt
+
+68. Download/install Heroku:
+        https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
+68. Then log into Heroku:
+        heroku login
