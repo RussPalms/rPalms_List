@@ -211,7 +211,19 @@ in the CLI
     
 57. We can then import the module in our views file.
 
-58. Let's then gather all our dependencies and place them in a text file:
+58. Let's also install our the requests library:
+        pip install requests
+
+59. Then we can also import that in the views file
+
+60. Let's then gather all our dependencies and place them in a text file:
         pip freeze > requirements.txt
 
-59.
+61. We then go to the views file and use beautifulsoup to parse the html that we get 
+    from a user's search
+
+62. After parsing the html we can go back into the style.css file that we created earlier
+    and fix the format of the listings.
+
+63. After all is fixed we can start hosting our app on the internet. We will be using 
+    Heroku for this.
