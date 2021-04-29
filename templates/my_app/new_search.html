@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--we are grabbing the search variable that we defined in the views
+the | title forces the input to capitalize every word-->
+    <h2 style="text-align: center">{{ search | title }}</h2>
+{% endblock content %}
