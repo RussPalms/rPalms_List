@@ -245,3 +245,24 @@ in the CLI
 
 68. Then log into Heroku:
         heroku login
+
+69. Then create a new app:
+        heroku create
+
+70. Create a new postgres database for your app:
+        heroku addons:create heroku-postgresql:hobby-dev
+
+71. Stage the app:
+        git add .
+
+72. Commit:
+        git commit -m "Ready to heroku this bitch"
+
+73. Push to heroku:
+        git push heroku master
+
+71. Then make your makemigrations:
+        heroku run python manage.py makemigrations
+
+72. Run the migrations:
+        heroku run python manage.py migrate
