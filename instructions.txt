@@ -152,6 +152,42 @@ in the CLI
 41. 'windows' and 'vscode' are selected by default. Deselect them so that the .gitignore file
     doesn't include any unneccesary files.
 
-42. Search 'python' and add it to the file.
+42. Search 'python' and select it. Then create the .gitignore file.
 
+43. Let's then create a new Github repository on our github account and give it the name
+    of our app.
 
+44. Then head back to our bash shell and run:
+        git init -b main
+    This initializes our local directory as a Git repository.
+    Alternatively we could also use the built in git initializer that comes with vs code.
+    To use it, click the Git icon on the left side bar and click 'Initilize Git Repository'
+    which produces the same results.
+
+45. We then need to add the files in our local repository then stage them for the first commit.
+    To do this use:
+        git add .
+    This adds the files in the local repository and stages them for commit. To unstage a file,
+    use 'git reset HEAD YOUR-FILE'.
+    To do this through vscode, simply go to the git sidebar and click the add icon next to 
+    the files you want to stage.
+
+46. Then we need to commit the tracked changes and prepare them to be pushed to a remote 
+    repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1'
+    and commit and add the file again.
+        git commit -m "First commit"
+    In the vscode, you can click the checkmark to commit your files.
+
+47. When creating a new repository on github you are given a url for the repository. Copy
+    that url and paste it in this next command:
+        git remote add origin https://github.com/RussPalms/rPalms_List.git
+    This sets the new remote.
+
+48. To verify the remote url execute:
+        git remote -v
+
+49. Push the changes in your local repository to Github
+        git push origin main
+    We can now check our repository on GitHub to see that our local repositories are not synced
+
+50.
