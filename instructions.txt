@@ -1,0 +1,157 @@
+Step by step instructions for creating a craigslist clone
+
+1.  Download/Install VS code for our indegrated developement environment (IDE)
+
+2.  Download/Install Anaconda so that we can create virtual environments
+
+3.  Download/Install Git so that we can easily manage multiple versions of our project as 
+    well as have a bash shell to easily execute our commands (especially if we are on a 
+    Windows machine)
+
+4.  Run Git Bash for easy configuration of our project
+
+5.  Create a directory for our project and cd into into it:
+        mkdir django_project
+        cd django_project
+
+6.  Create a virtual Anaconda environment and give it the name of our project using:
+        conda create --name rpalms_list python=3
+
+7.  After creating the virtual environment we need to activate it using:
+        conda activate rpalms_list
+
+8.  We then need to install Django using either pip or conda, in this case we are using pip:
+        pip install django
+
+** a little side note for commandline shortcuts
+** you can use the keybinding:
+    CRTR + R
+what this does is it lets you search for recently used commands that have been executed 
+in the CLI
+
+9.  After installing django we can then start to create a django project and give it a 
+    name using:
+        django-admin startproject rpalms_list
+    What this does is it created the minimal neccesary code and file structer to 
+    build our django app 
+
+10. We then need to CD into our project:
+        cd rpalms_list
+
+11. After creating our django project we then need to start creating our app 
+    directories and in this case we're naming it 'my_app' to do that we use:
+        django-admin startapp my_app
+    This creates the file structure for our app
+
+12. We then are ready to start programming our app and to open up our IDE in our 
+    current working directory we use:
+        code .
+
+13. Once we're in our IDE we need to chose our Python interpreter, in this case 
+    VS Code prompts us to choose one as soon as it's opened up. We then choose the 
+    'rpalms_list' conda environment that we created.
+
+14. Let's first open a new integrated terminal in our IDE. This isn't neccesary, 
+    you can use the Git Bash shell we we're using earlier, but this is just my preference.
+    We can use the shortcut keybinding for that:
+        CTRL + SHIFT + `
+    The last character is a 'backtick' not an 'apostrophy'.
+
+15. Initially the default CLI that is used is powershell. To avoid Operating System
+    problems, we are going to continue using a bash shell. To access that 
+    click the dropdown menu towards the top right of the terminal window and select
+        New Git Bash
+    We can then go on to execute commands in our bash shell.
+
+14. This isn't a neccesary next step, but if you want to test to see if the initial
+    django server runs correctly, execute:
+        python manage.py runserver
+    The manage.py file is one of the initial files that django creates when we first 
+    create a new project. What this file does is it executes a local server
+    and runs our app. It then gives us the url where we can test and see if it is working.
+
+15. Let's create a new file in our root directory and name it 'templates':
+        mkdir templates
+    This is going house the html file that our app is going to display.
+
+16. Right after we create our templates folder let's create the html file
+    and name it 'base':
+        touch templates/base.html
+    
+17. Let's then go into our base.html and create the initial structure for our webpage.
+
+18. The inital html file we create won't render automatically, we need to create a view and 
+    map our urls. 
+
+19. Whenever we create a new app we want to install it in our settings.py file by going to the 
+    INSTALLED_APPS list and appending my_app to the end of it.
+
+20. While still in our settings.py file we should also define the location of our template
+    directory.
+
+21. Let's then define our STATIC_URL in the same file we are currently in. This is something
+    we will be using later.
+
+22. Go you the views.py file and create a home function that renders our html.
+
+23. Create another urls.py file in the my_app directory.
+
+24. Go to that urls.py file and define urlpatterns which will route your view to the homepage.
+
+25. At this point we should create our initial migrations and to do that we run:
+        python manage.py makemigrations
+
+26. Then migrate using:
+        python manage.py migrate
+
+27. From here we can create a superuser. To do that we do:
+        python manage.py createsuperuser
+    This will create an admin which will take us to the backend of our app.
+
+28. To view our admin we first run our server again, then at the end of the url, we enter:
+        /admin
+    We can then access the database for our app.
+
+29. Let's then go to the models.py file and implement the search functionality for our app.
+
+30. Go to admin.py and register  the search model.
+
+31. To render our html we need to define the urlpatterns in our rpalms_list/url.py file.
+
+32. The next thing we want to do is start to create our front-end stuff. To begin, let's create
+    a static folder in our root directory.
+        mkdir static
+
+33. Let's then create a css folder in our static folder:
+        mkdir static/css
+
+34. After that create a new css file and call it 'style'
+        touch static/css/style.css
+
+34. Then let's add a new folder in our templates directory called my_app:
+        mkdir templates/my_app
+
+35. Then add a new html file in that my_app folder and call it 'index':
+        touch templates/my_app/index.html
+
+36. From here we want to start saving our work to a Github repository. The first thing we 
+    should do is generate a .gitignore file. Since we're working with vscode, we need to
+    install the extension for vscode. To do that open the vscode extentions tab using the 
+    shortcut:
+        CTRL + SHIFT + X
+
+37. Then search for '.gitignore Generator'.
+
+38. Hit the 'install' button.
+
+39. We then want to use the extension to do that let's open the command palette using:
+    CTRL + SHIFT + P
+
+40. Search for 'Generate .gitignore file'. 
+
+41. 'windows' and 'vscode' are selected by default. Deselect them so that the .gitignore file
+    doesn't include any unneccesary files.
+
+42. Search 'python' and add it to the file.
+
+
