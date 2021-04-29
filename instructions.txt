@@ -8,7 +8,7 @@ Step by step instructions for creating a craigslist clone
     well as have a bash shell to easily execute our commands (especially if we are on a 
     Windows machine)
 
-4.  Run Git Bash for easy configuration of our project
+4.  Run Git Bash for easy configuration of our project.
 
 5.  Create a directory for our project and cd into into it:
         mkdir django_project
