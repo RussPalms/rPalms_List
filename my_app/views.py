@@ -1,4 +1,8 @@
+# here we are importing the request module to deal with our HTTP functionalities
+import requests
 from django.shortcuts import render
+# here we are importing Beautiful Soup which is used for web scraping
+from bs4 import BeautifulSoup
 
 # Create your views here.
 # when this funcion is called, it renders the base.html in templates

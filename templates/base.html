@@ -62,7 +62,7 @@ css and html files-->
                 </div>
                 <!--this gives us our search fuctionality-->
                 <form action="{% url 'new_search' %}" method="post">
-                    <!--this is a security feature in django which executes when somehting is 
+                    <!--the csrf_token is a security feature in django which executes when somehting is 
                     submitted to the webpage-->
                     {% csrf_token %}
                     <input type="text" name="search" placeholder="search">
@@ -70,6 +70,8 @@ css and html files-->
                     <i class="material-icons right">send</i>
                     </button>
                 </form>
+                <!--these next two lines are taking defined block contents in another html file and placing
+                them here-->
                 {% block content %}
                 {% endblock content %}
             </div>

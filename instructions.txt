@@ -190,4 +190,28 @@ in the CLI
         git push origin main
     We can now check our repository on GitHub to see that our local repositories are not synced
 
-50.
+50. If you didn't add a readme.md (.md files are 'markdown' files) you can create one using:
+        touch README.md
+
+51. We'll then go ahead and create some frontend and start by coding up our base.html file.
+
+52. In the html file we added premade stylesheets by linking libraries from the internet.
+
+53. Then we will start creating the navigation bar.
+
+54. Then we can add the icons from materialize.
+
+55. Create a new file in the templates/my_app directory and call it new_search:
+        touch templates/my_app/new_search.html
+    This html file represents the page that is directed to when using the search function.
+
+56. At this point we can start working on our web scraping. We can first start by installing 
+    beautiful soup using pip:
+        pip install bs4
+    
+57. We can then import the module in our views file.
+
+58. Let's then gather all our dependencies and place them in a text file:
+        pip freeze > requirements.txt
+
+59.
