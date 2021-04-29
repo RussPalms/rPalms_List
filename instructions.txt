@@ -149,8 +149,8 @@ in the CLI
 
 40. Search for 'Generate .gitignore file'. 
 
-41. 'windows' and 'vscode' are selected by default. Deselect them so that the .gitignore file
-    doesn't include any unneccesary files.
+41. 'windows' and 'vscode' are selected by default. Don't deselect them. This makes sure
+    that the .gitignore file doesn't include any unneccesary files.
 
 42. Search 'python' and select it. Then create the .gitignore file.
 
